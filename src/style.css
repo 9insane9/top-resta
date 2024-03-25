@@ -1,0 +1,109 @@
+/* HOME AND GENERAL STYLING */
+html {
+    background-color: black;
+    background:
+    linear-gradient(0deg,rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+        url(https://media.istockphoto.com/id/1405543709/photo/colorful-ice-cream-balls-on-table.jpg?s=2048x2048&w=is&k=20&c=SzAKF2J5dg6i4n4hnOKXOc36sbCql5l6yN7M36jBz64=);
+    
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    background: linear-gradient(0deg,rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6));
+    margin: 0 auto;
+    max-width: 1100px;
+    min-width: 350px;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    padding: 20px 10vw;
+    justify-content: space-around;
+}
+
+button {
+    background: none;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+    padding: 5px;
+    color: cyan;
+    font-size: 1.25rem;
+    max-width: 150px;
+    min-width: 13vw;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(0deg,rgba(0, 35, 51, 0.918), rgba(0, 35, 51, 0.918));
+    border: 1px solid #97ffff;
+    color: #97ffff;
+    transform: scale(1.05);
+    box-shadow: 1px 1px 1px #f5f5f5 ;
+}
+
+.container {
+    height: 750px;
+    text-align: center;
+    padding: 20px 100px;
+    color: rgb(63, 255, 255);
+    font-size: 2rem;
+}
+
+/* MENU */
+
+.menu-grid {
+    display: grid;
+    gap: 50px;
+    /* grid-auto-flow: row; */
+    grid-template-rows: (auto-fit, minmax(250px, 1fr));
+    color: #00ffff;
+}
+
+.menu-item-img {
+    grid-area: image;
+}
+
+.menu-item-name {
+    grid-area: name;
+}
+
+.menu-item-desc {
+    grid-area: desc;
+}
+
+.menu-item {
+    border: 1px solid cyan;
+    margin: 0 50px;
+    padding: 30px 10% 30px 5%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas: "image name"
+                        "image desc";
+}
+
+.menu-item > h3 {
+    margin-top: 0;
+}
+
+.menu-item > img {
+    height: 150px;
+    width: 200px;
+    vertical-align: middle;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .menu-item-img {
+        display: none;
+    }
+    
+}
